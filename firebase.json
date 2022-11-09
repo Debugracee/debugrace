@@ -1,0 +1,88 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/pagina-inicial",
+        "function": "app"
+      },
+      {
+        "source": "/login",
+        "function": "app"
+      },
+      {
+        "source": "/cadastro",
+        "function": "app"
+      },
+      {
+        "source": "/guia-estudos",
+        "function": "app"
+      },
+      {
+        "source": "/quem-somos",
+        "function": "app"
+      },
+      {
+        "source": "/guia-estudos/ciclo-basico",
+        "function": "app"
+      },
+      {
+        "source": "/guia-estudos/front-end",
+        "function": "app"
+      },
+      {
+        "source": "/guia-estudos/back-end",
+        "function": "app"
+      },
+      {
+        "source": "/configuracoes",
+        "function": "app"
+      },
+      {
+        "source": "/usuario",
+        "function": "app"
+      },
+      {
+        "source": "/usuario/:id",
+        "function": "app"
+      },
+      {
+        "source": "/deslog",
+        "function": "app"
+      },
+      {
+        "source": "/status",
+        "function": "app"
+      },
+      {
+        "source": "/logar",
+        "function": "app"
+      },
+      {
+        "source": "/trilhas",
+        "function": "app"
+      },
+      {
+        "source": "/trilhas/:id",
+        "function": "app"
+      }
+    ]
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log"
+      ]
+    }
+  ]
+}

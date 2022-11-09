@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Courier+Prime:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    height: 100vh;
+    background-color: #9ea6c1ad;
+}
+
+.logo img {
+    width: 17vw;
+    height: 5vh;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    width: 30vw;
+}
+
+.menu a {
+    font-family: 'Cairo', sans-serif;
+    color: #FFF2E7;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.painel {
+    background-color: #1C256D;
+    display: flex;
+    box-shadow: 0 0 1em #1c256d9a;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.painel-text {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+
+}
+
+.painel-text img {
+    width: 50vw;
+
+}
+
+.painel-text p {
+    font-size: 1.4rem;
+    font-family: 'Cairo', sans-serif;
+    color: #FFF2E7;
+}
+
+.painel-img {
+    margin-top: 10px;
+}
+
+.painel-img img {
+    width: vw;
+    height: 40vh;
+}
+
+.content-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin-bottom: 40px;
+}
+
+.seta{
+    font-size: 1.8rem;
+    color:#232e86;
+    cursor: pointer;
+}
+
+.content-page button {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    max-width: 90vw;
+    margin-top: 40px;
+    background-color: #F9FBFF;
+    border: 2px solid #2B3D99;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    padding: 10px;
+    height: 8vh;
+    /* height: 50vh;  */
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btn-title-CicloBasico {
+    display: flex;
+    justify-content: space-between;
+    width: 77vw;
+    align-items: center;
+}
+
+.btn-title-CicloBasico img {
+    width: 15rem;
+}
+
+.btn-title-frontEnd {
+    display: flex;
+    justify-content: space-between;
+    width: 77vw;
+    align-items: center;
+}
+
+.btn-title-frontEnd img {
+    width: 20vw;
+}
+
+.btn-title-backEnd {
+    display: flex;
+    justify-content: space-between;
+    width: 77vw;
+    align-items: center;
+}
+
+.btn-title-backEnd img {
+    width: 20vw;
+}
+
+.desc { 
+    margin-bottom: 10px;
+}
+
+#content-cicloBasico {
+    font-family: 'Cairo', sans-serif;
+    color:#1C256D;
+    font-weight: bold;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 70vw;
+    align-items: center;
+    text-align: justify;
+    padding: 5px;
+    visibility: hidden;
+}
+
+#content-frontEnd{
+    font-family: 'Cairo', sans-serif;
+    color:#1C256D;
+    font-weight: bold;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    width: 70vw;
+    align-items: center;
+    padding: 5px;
+    visibility: hidden;
+}
+
+#content-backEnd{
+    font-family: 'Cairo', sans-serif;
+    color:#1C256D;
+    font-weight: bold;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    width: 70vw;
+    align-items: center;
+    padding: 5px;
+    visibility: hidden;
+}
+
+
+.content-page div p {
+    margin-bottom: 15px;
+    width: 60vw;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.2rem;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.content-page div a {
+    color: #e5ecfb;
+    border-radius: 4px;
+    font-family: 'Cairo', sans-serif;
+    padding: 6px 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.3rem;
+    background-color: #ad2647;
+    border: 100px #1C256D;
+}
+
+
+#btn-cicloBasico.active {
+    height: 50vh;
+}
+
+#content-cicloBasico.active {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+}
+
+#btn-frontEnd.active {
+    height: 50vh;
+}
+
+#content-frontEnd.active {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+}
+
+#btn-backEnd.active {
+    height: 50vh;
+}
+
+#content-backEnd.active {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+}
+
+.container-modal {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    left: 0;
+    top: 0;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  
+  .modal {
+    width: 40vw;
+    height: 40vh;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #f9fbff;
+    border: 0.5px solid #2b3d99;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 25%);
+    border-radius: 3px;
+    padding: 5px;
+  }
+  
+  .modal p {
+    font-family: "Cairo", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #606060;
+  }
+  
+  .modal-close {
+    padding: 7px;
+    border-bottom: 0.4px solid #606060;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .modal-close i {
+    font-style: normal;
+    color: gray;
+    cursor: pointer;
+  }
+  
+  .modal-close i:hover {
+    color: #ad2647;
+  }
+  
+  .btns {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .btnLogin {
+    padding: 10px;
+    border-radius: 10px;
+    background: #ad2647;
+    color: #fff;
+    font-family: "Cairo", sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .btnRegister {
+    padding: 10px;
+    border-radius: 10px;
+    background: #2b3d99;
+    color: #fff;
+    font-family: "Cairo", sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .modal.active {
+    display: flex;
+    width: 40vw;
+    height: 40vh;
+    /* display: none; */
+    top: auto;
+    left: auto;
+  }
+  
+  .container-modal.active {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .painel-text {
+        margin: 0 auto;
+        width: 80vw;
+    }
+
+    .painel-img {
+        display: none;
+    }
+
+    .painel-text img {
+        width: 70vw;
+    }
+
+    .painel-text p {
+        margin-bottom: 13px;
+        font-size: 1.3rem;
+    }
+
+    .content-page div p {
+    font-size: 0.9rem;
+    }
+
+    .btn-title img {
+        width: 25vw;
+    }
+
+    .content-page div a {
+        font-size: 1rem;
+    }
+
+    .btn-title-CicloBasico img {
+        width: 20vw;
+    }
+
+    .btn-title-frontEnd img {
+        width: 25vw;
+    }
+
+    .btn-title-backEnd img {
+        width: 25vw;
+    }
+}
+
+@media (max-width: 425px) {
+    .painel-text p {
+        font-size: 1rem;
+    }
+    .painel-text img {
+        width: 76vw;
+    }
+
+    .btn-title-CicloBasico img {
+        width: 33vw;
+    }
+
+    .btn-title-frontEnd img {
+        width: 40vw;
+    }
+
+    .btn-title-backEnd img {
+        width: 40vw;
+    }
+
+    .seta {
+        font-size: 1.6rem;
+    }
+
+    .content-page div p {
+        font-size: 0.67rem;
+    }
+    .content-page div a {
+        font-size: 0.7rem;
+    }
+
+    @media (max-width: 320px) {
+        .painel-text img {
+            width: 89vw;
+        }
+
+        .painel-text p {
+            font-size: 0.9rem;
+        }
+
+        .content-page div a {
+            font-size: 0.6rem;
+        }
+
+        .seta {
+            font-size: 1.4rem;
+        }
+
+        .content-page div p {
+            font-size: 0.616rem;
+        }
+    }
+}

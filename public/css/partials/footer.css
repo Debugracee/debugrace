@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Courier+Prime:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+.info-discord {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discord {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #1C256D;
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+    cursor: pointer;
+    border: solid;
+    border-radius: 5px;
+    border-color: #2F66A6;
+    width: 650px;
+    height: 2.5rem;
+
+}
+
+.discord a {
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+    color: #FFFF;
+    width: 60%;
+
+}
+
+footer {
+
+    background-color: #1C256D;
+    font-family: 'Courier Prime';
+
+}
+
+.media-dad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialmedia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialmedia ul {
+
+    display: flex;
+    justify-content: center;
+    padding-left: 0.9rem;
+
+}
+
+.socialmedia li {
+
+    list-style-type: none;
+    margin-right: 0.5rem;
+
+}
+
+.socialmedia i {
+
+    font-size: xx-large;
+    color: #E3E6FF;
+    justify-content: space-between;
+
+}
+
+.etc {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14vw;
+    margin-left: 1rem;
+
+}
+
+.footer-logo img {
+
+    width: 12vw;
+    height: 5vh;
+
+
+}
+
+.copyright {
+
+    width: 100%;
+    background-color: #060453;
+    color: #FFFF;
+    text-align: center;
+    font-size: small;
+    padding: 0.5rem;
+
+}
+
+@media (min-width: 150px) and (max-width: 319px) {
+.footer-logo img {
+    width: 40vw;
+}
+.discord {
+    font-size: 10px;
+}
+
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
+    .footer-logo img {
+        width: 25vw;
+    }
+}
