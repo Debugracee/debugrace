@@ -43,9 +43,9 @@ const tokenObject = JSON.parse(token);
 console.log(tokenObject);
 
 if (!usuarioObject || !tokenObject) {
-  window.location.assign("http://localhost:5000/login");
+  window.location.assign("https://debugrace-30568.web.app/login");
 } else {
-  fetch("http://localhost:5000/status", {
+  fetch("https://debugrace-30568.web.app/status", {
     method: "POST",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify({
@@ -59,7 +59,7 @@ if (!usuarioObject || !tokenObject) {
       const status = logado.statusLogin;
       console.log(status);
       if (!status && tokenObject === null) {
-        window.location.assign("http://localhost:5000/login");
+        window.location.assign("https://debugrace-30568.web.app/login");
         // colocar a estilizacao "normal aqui" -> carregar modal
       } else {
         // transformar isso me funcao(talvez) por se repetir mt no site
@@ -74,13 +74,13 @@ if (!usuarioObject || !tokenObject) {
         logoutButton.removeAttribute("href");
         logoutButton.addEventListener("click", () => {
           localStorage.removeItem("token");
-          fetch("http://localhost:5000/deslog", {
+          fetch("https://debugrace-30568.web.app/deslog", {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify({ email: usuarioObject.email }),
           }).then((res) => res.json());
           localStorage.removeItem("usuario");
-          window.location.assign("http://localhost:5000/login");
+          window.location.assign("https://debugrace-30568.web.app/login");
         });
         // editar estilização das tags (usuario logado)
 
@@ -109,7 +109,7 @@ btnDelete.addEventListener("click", () => {
   });
 
   deleteUser.addEventListener("click", () => {
-    fetch(`http://localhost:5000/usuario/${usuarioObject.id}`, {
+    fetch(`https://debugrace-30568.web.app/usuario/${usuarioObject.id}`, {
       method: "DELETE",
       headers: { "Content-type": "application/json" }
     }).then((res) =>
@@ -117,7 +117,7 @@ btnDelete.addEventListener("click", () => {
     );
     localStorage.removeItem("token");
     localStorage.removeItem("usuario");
-    window.location.assign("http://localhost:5000/cadastro");
+    window.location.assign("https://debugrace-30568.web.app/cadastro");
   });
   // quando clicar no botao chamar o modal
   // nele vai ter a opcao de cancelar e excluir
@@ -128,7 +128,7 @@ btnDelete.addEventListener("click", () => {
 
 btnSave.addEventListener("click", (e) => {
   e.preventDefault()
-  fetch(`http://localhost:5000/usuario/${usuarioObject.id}`, {
+  fetch(`https://debugrace-30568.web.app/usuario/${usuarioObject.id}`, {
     method: "PUT",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify({

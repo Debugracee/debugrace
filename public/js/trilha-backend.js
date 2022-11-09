@@ -4,7 +4,7 @@ const tokenObject = JSON.parse(token);
 const usuarioObject = JSON.parse(token);
 console.log(tokenObject);
 if (!usuarioObject || !tokenObject) {
-  window.location.assign("http://localhost:5000/login");
+  window.location.assign("https://debugrace-30568.web.app/login");
 } else {
   const configElement = document.querySelector("#item1");
   const logoutButton = document.querySelector("#item2");
@@ -16,16 +16,16 @@ if (!usuarioObject || !tokenObject) {
   logoutButton.addEventListener("click", () => {
     localStorage.removeItem("token")
     localStorage.removeItem("usuario");
-    fetch("http://localhost:5000/deslog", {
+    fetch("https://debugrace-30568.web.app/deslog", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({ email: usuarioObject.email }),
     }).then((res) => res.json());
-    window.location.assign("http://localhost:5000/login");
+    window.location.assign("https://debugrace-30568.web.app/login");
   });
 }
 
-fetch("http://localhost:5000/trilhas")
+fetch("https://debugrace-30568.web.app/trilhas")
   .then((res) => res.json())
   .then((res) => {
     console.log(res);

@@ -15,7 +15,7 @@ async function registerUsers() {
     senha: password.value.trim(),
   };
 
-  const req = await fetch("http://localhost:5000/usuario", {
+  const req = await fetch("https://debugrace-30568.web.app/usuario", {
     method: "POST",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify(newUser),
@@ -28,7 +28,7 @@ async function registerUsers() {
         alertSuccess(email);
       }
       if (res.usuario.id) {
-        window.location.assign("http://localhost:5000/login");
+        window.location.assign("https://debugrace-30568.web.app/login");
       }
     });
 }

@@ -56,8 +56,41 @@ const token = localStorage.getItem("token");
 const tokenObject = JSON.parse(token);
 console.log(tokenObject);
 
+routerCicloBasico.addEventListener("click", () => {
+  if (!usuarioObject || !tokenObject) {
+    textModal.innerHTML = "Você deseja acessar os conteúdos da trilha Ciclo Básico?"
+    activeModal();
+  } else {
+    window.location.assign(
+      "https://debugrace-30568.web.app/guia-estudos/ciclo-basico"
+    );
+  }
+})
+
+routerFrontEnd.addEventListener("click", () => {
+  if (!usuarioObject || !tokenObject) {
+    textModal.innerHTML = "Você deseja acessar os conteúdos da trilha Front-End?"
+    activeModal();
+  } else {
+    window.location.assign(
+      "https://debugrace-30568.web.app/guia-estudos/front-end"
+    );
+  }
+})
+
+routerBackEnd.addEventListener("click", () => {
+  if (!usuarioObject || !tokenObject) {
+    textModal.innerHTML = "Você deseja acessar os conteúdos da trilha Back-End?"
+    activeModal();
+  } else {
+    window.location.assign(
+      "https://debugrace-30568.web.app/guia-estudos/back-end"
+    );
+  }
+})
+
 const usuarioObject = JSON.parse(usuario);
-fetch("http://localhost:5000/status", {
+fetch("https://debugrace-30568.web.app/status", {
   method: "POST",
   headers: { "Content-type": "application/json" },
   body: JSON.stringify({ email: usuarioObject.email }),
@@ -68,7 +101,7 @@ fetch("http://localhost:5000/status", {
     const status = logado.statusLogin;
     console.log(status);
     if (!status || !tokenObject) {
-      window.location.assign("http://localhost:5000/guia-estudos");
+      window.location.assign("https://debugrace-30568.web.app/guia-estudos");
       // colocar a estilizacao "normal aqui"
     } else {
       console.log(logado);
@@ -82,13 +115,13 @@ fetch("http://localhost:5000/status", {
       logoutButton.removeAttribute("href");
       logoutButton.addEventListener("click", () => {
         localStorage.removeItem("token");
-        fetch("http://localhost:5000/deslog", {
+        fetch("https://debugrace-30568.web.app/deslog", {
           method: "POST",
           headers: { "Content-type": "application/json" },
           body: JSON.stringify({ email: usuarioObject.email }),
         }).then((res) => res.json());
         localStorage.removeItem("usuario");
-        window.location.assign("http://localhost:5000/login");
+        window.location.assign("https://debugrace-30568.web.app/login");
       });
       // editar estilização das tags (usuario logado)
     }
@@ -100,7 +133,7 @@ routerCicloBasico.addEventListener("click", () => {
     activeModal();
   } else {
     window.location.assign(
-      "http://localhost:5000/guia-estudos/ciclo-basico"
+      "https://debugrace-30568.web.app/guia-estudos/ciclo-basico"
     );
   }
 })
@@ -111,7 +144,7 @@ routerFrontEnd.addEventListener("click", () => {
     activeModal();
   } else {
     window.location.assign(
-      "http://localhost:5000/guia-estudos/front-end"
+      "https://debugrace-30568.web.app/guia-estudos/front-end"
     );
   }
 })
@@ -122,7 +155,7 @@ routerBackEnd.addEventListener("click", () => {
     activeModal();
   } else {
     window.location.assign(
-      "http://localhost:5000/guia-estudos/back-end"
+      "https://debugrace-30568.web.app/guia-estudos/back-end"
     );
   }
 })

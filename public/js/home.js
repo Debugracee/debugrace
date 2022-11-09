@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const tokenObject = JSON.parse(token);
   console.log(tokenObject);
   
-  fetch("http://localhost:5000/status", {
+  fetch("https://debugrace-30568.web.app/status", {
     method: "POST",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify({ email: usuarioObject.email }),
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const status = logado.statusLogin;
       console.log(status);
       if (!status || !tokenObject) {
-        window.location.assign("http://localhost:5000/pagina-inicial");
+        window.location.assign("https://debugrace-30568.web.app/pagina-inicial");
       } else {
         console.log(logado);
         const configElement = document.querySelector("#item1");
@@ -28,13 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
         logoutButton.removeAttribute("href");
         logoutButton.addEventListener("click", () => {
           localStorage.removeItem("token")
-          fetch("http://localhost:5000/deslog", {
+          fetch("https://debugrace-30568.web.app/deslog", {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify({ email: usuarioObject.email }),
           }).then((res) => res.json());
           localStorage.removeItem("usuario");
-          window.location.assign("http://localhost:5000/login");
+          window.location.assign("https://debugrace-30568.web.app/login");
         });
       }
     });

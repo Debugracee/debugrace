@@ -15,7 +15,7 @@ async function loginUsuario() {
     senha: password.value.trim(),
   };
 
-  await fetch("http://localhost:5000/logar", {
+  await fetch("https://debugrace-30568.web.app/logar", {
     method: "POST",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify(user),
@@ -34,7 +34,7 @@ async function loginUsuario() {
       localStorage.setItem("token", JSON.stringify(token));
       console.log(usuario.id);
       if(usuario.id && token) {
-        window.location.assign("http://localhost:5000/guia-estudos");
+        window.location.assign("https://debugrace-30568.web.app/guia-estudos");
       }
     });
 }
