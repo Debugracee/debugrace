@@ -15,7 +15,7 @@ async function registerUsers() {
     senha: password.value.trim(),
   };
 
-  const req = await fetch("https://debugrace-30568.web.app/usuario", {
+  const req = await fetch("https://debugrace-backend.onrender.com/usuario", {
     method: "POST",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify(newUser),

@@ -90,7 +90,7 @@ routerBackEnd.addEventListener("click", () => {
 })
 
 const usuarioObject = JSON.parse(usuario);
-fetch("https://debugrace-30568.web.app/status", {
+fetch("https://debugrace-backend.onrender.com/status", {
   method: "POST",
   headers: { "Content-type": "application/json" },
   body: JSON.stringify({ email: usuarioObject.email }),
@@ -115,7 +115,7 @@ fetch("https://debugrace-30568.web.app/status", {
       logoutButton.removeAttribute("href");
       logoutButton.addEventListener("click", () => {
         localStorage.removeItem("token");
-        fetch("https://debugrace-30568.web.app/deslog", {
+        fetch("https://debugrace-backend.onrender.com/deslog", {
           method: "POST",
           headers: { "Content-type": "application/json" },
           body: JSON.stringify({ email: usuarioObject.email }),

@@ -45,7 +45,7 @@ console.log(tokenObject);
 if (!usuarioObject || !tokenObject) {
   window.location.assign("https://debugrace-30568.web.app/login");
 } else {
-  fetch("https://debugrace-30568.web.app/status", {
+  fetch("https://debugrace-backend.onrender.com/status", {
     method: "POST",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify({
@@ -74,7 +74,7 @@ if (!usuarioObject || !tokenObject) {
         logoutButton.removeAttribute("href");
         logoutButton.addEventListener("click", () => {
           localStorage.removeItem("token");
-          fetch("https://debugrace-30568.web.app/deslog", {
+          fetch("https://debugrace-backend.onrender.com/deslog", {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify({ email: usuarioObject.email }),
@@ -109,7 +109,7 @@ btnDelete.addEventListener("click", () => {
   });
 
   deleteUser.addEventListener("click", () => {
-    fetch(`https://debugrace-30568.web.app/usuario/${usuarioObject.id}`, {
+    fetch(`https://debugrace-backend.onrender.com/usuario/${usuarioObject.id}`, {
       method: "DELETE",
       headers: { "Content-type": "application/json" }
     }).then((res) =>
@@ -128,7 +128,7 @@ btnDelete.addEventListener("click", () => {
 
 btnSave.addEventListener("click", (e) => {
   e.preventDefault()
-  fetch(`https://debugrace-30568.web.app/usuario/${usuarioObject.id}`, {
+  fetch(`https://debugrace-backend.onrender.com/usuario/${usuarioObject.id}`, {
     method: "PUT",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify({

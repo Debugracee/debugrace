@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const tokenObject = JSON.parse(token);
   console.log(tokenObject);
   
-  fetch("https://debugrace-30568.web.app/status", {
+  fetch("https://debugrace-backend.onrender.com/status", {
     method: "POST",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify({ email: usuarioObject.email }),
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         logoutButton.removeAttribute("href");
         logoutButton.addEventListener("click", () => {
           localStorage.removeItem("token")
-          fetch("https://debugrace-30568.web.app/deslog", {
+          fetch("https://debugrace-backend.onrender.com/deslog", {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify({ email: usuarioObject.email }),

@@ -42,34 +42,6 @@
       {
         "source": "/configuracoes",
         "function": "app"
-      },
-      {
-        "source": "/usuario",
-        "function": "app"
-      },
-      {
-        "source": "/usuario/:id",
-        "function": "app"
-      },
-      {
-        "source": "/deslog",
-        "function": "app"
-      },
-      {
-        "source": "/status",
-        "function": "app"
-      },
-      {
-        "source": "/logar",
-        "function": "app"
-      },
-      {
-        "source": "/trilhas",
-        "function": "app"
-      },
-      {
-        "source": "/trilhas/:id",
-        "function": "app"
       }
     ]
   },
@@ -82,6 +54,40 @@
         ".git",
         "firebase-debug.log",
         "firebase-debug.*.log"
+      ],
+      "rewrites":[
+        {
+          "source": "/usuario",
+          "function": "app"
+        },
+        {
+          "source": "/usuario/:id",
+          "function": "app"
+        },
+        {
+          "source": "/deslog",
+          "function": "app"
+        },
+        {
+          "source": "/status",
+          "function": "app"
+        },
+        {
+          "source": "/logar",
+          "function": "app"
+        },
+        {
+          "source": "/trilhas",
+          "function": "app"
+        },
+        {
+          "source": "/trilhas/:id",
+          "function": "app"
+        },
+        {
+          "source": "/",
+          "function": "app"
+        }
       ]
     }
   ]

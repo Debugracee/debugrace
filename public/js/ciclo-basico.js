@@ -37,7 +37,7 @@ if(!usuarioObject || !tokenObject) {
   logoutButton.addEventListener("click", () => {
     localStorage.removeItem("token")
     localStorage.removeItem("usuario");
-    fetch("https://debugrace-30568.web.app/deslog", {
+    fetch("https://debugrace-backend.onrender.com/deslog", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({ email: usuarioObject.email }),
@@ -46,7 +46,7 @@ if(!usuarioObject || !tokenObject) {
   });
 }
 
-fetch("https://debugrace-30568.web.app/trilhas")
+fetch("https://debugrace-backend.onrender.com/trilhas")
   .then((res) => res.json())
   .then((res) => {
     console.log(res);

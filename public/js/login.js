@@ -15,7 +15,7 @@ async function loginUsuario() {
     senha: password.value.trim(),
   };
 
-  await fetch("https://debugrace-30568.web.app/logar", {
+  await fetch("https://debugrace-backend.onrender.com/login", {
     method: "POST",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify(user),
