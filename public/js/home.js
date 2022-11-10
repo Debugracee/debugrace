@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const status = logado.statusLogin;
       console.log(status);
       if (!status || !tokenObject) {
-        window.location.assign("https://debugrace-30568.web.app/pagina-inicial");
+        window.location.assign("https://debugrace-30568.web.app/");
       } else {
         console.log(logado);
         const configElement = document.querySelector("#item1");

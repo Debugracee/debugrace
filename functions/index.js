@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: false }));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "./public/"));
 
-app.get("/pagina-inicial", (req, res) => {
+app.get("/", (req, res) => {
   res.render("home");
 });
 
