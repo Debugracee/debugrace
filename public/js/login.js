@@ -1,11 +1,5 @@
 console.log("carregou");
 const form = document.querySelector("#formLogin");
-const usuario = localStorage.getItem("usuario");
-const usuarioObject = JSON.parse(usuario);
-const token = localStorage.getItem("token");
-const tokenObject = JSON.parse(token);
-console.log(tokenObject);
-
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   loginUsuario();
