@@ -8,12 +8,6 @@ const gender = document.getElementById("gender");
 const password = document.getElementById("password");
 const button = document.getElementById("check");
 
-const usuario = localStorage.getItem("usuario");
-const usuarioObject = JSON.parse(usuario);
-const token = localStorage.getItem("token");
-const tokenObject = JSON.parse(token);
-console.log(tokenObject);
-
 
 async function registerUsers() {
   let newUser = {

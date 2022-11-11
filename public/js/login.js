@@ -1,5 +1,6 @@
 console.log("carregou");
 const form = document.querySelector("#formLogin");
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   loginUsuario();
