@@ -49,10 +49,10 @@ if (!usuarioObject || !tokenObject) {
     method: "POST",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify({
-      email: usuarioObject.email 
+      email: usuarioObject.email,
     }),
-  }) 
-  // || usuarioAlteradoObject.email,
+  })
+    // || usuarioAlteradoObject.email,
     .then((res) => res.json())
     .then((res) => {
       const logado = res.statusLogado;
@@ -88,7 +88,6 @@ if (!usuarioObject || !tokenObject) {
         // mudarEmail.value = usuarioObject.email;
         // // mudarNascimento.value = usuarioObject.nascimento
         // mudarGenero.value = usuarioObject.genero;
-
       }
     });
 }
@@ -109,12 +108,13 @@ btnDelete.addEventListener("click", () => {
   });
 
   deleteUser.addEventListener("click", () => {
-    fetch(`https://debugrace-backend.onrender.com/usuario/${usuarioObject.id}`, {
-      method: "DELETE",
-      headers: { "Content-type": "application/json" }
-    }).then((res) =>
-      res.json()
-    );
+    fetch(
+      `https://debugrace-backend.onrender.com/usuario/${usuarioObject.id}`,
+      {
+        method: "DELETE",
+        headers: { "Content-type": "application/json" },
+      }
+    ).then((res) => res.json());
     localStorage.removeItem("token");
     localStorage.removeItem("usuario");
     window.location.assign("https://debugrace-30568.web.app/cadastro");
@@ -127,34 +127,34 @@ btnDelete.addEventListener("click", () => {
 });
 
 btnSave.addEventListener("click", (e) => {
-  e.preventDefault()
+  e.preventDefault();
   fetch(`https://debugrace-backend.onrender.com/usuario/${usuarioObject.id}`, {
     method: "PUT",
-    headers: { "Content-type": "application/json" },
+    headers: {
+      "Content-type": "application/json",
+      Authorization: `Bearer ${tokenObject}`,
+    },
     body: JSON.stringify({
       nome: mudarNome.value.trim(),
       email: mudarEmail.value.trim(),
       senha: mudarSenha.value,
-      tokenObject
     }),
   })
-  .then((res) => res.json())
-  .then((res) => {
-    if(res.erro) {
-      const msgResult = document.querySelector("#msgResult")
-      msgResult.innerHTML = res.erro
-    }
-    const usuarioAtualizado = res.usuarioAlterado;
-    msgResult.innerHTML = res.msg
-    console.log(usuarioAtualizado)
-  });
-    // .then((res) => {
-    //   const usuarioAtualizado = res.usuarioAlterado;
-    //   console.log(usuarioAtualizado)
-    //   // mensagem dizendo para o usuario que as alteracoes foram salvas
-    // }); 
-
-
+    .then((res) => res.json())
+    .then((res) => {
+      if (res.erro) {
+        const msgResult = document.querySelector("#msgResult");
+        msgResult.innerHTML = res.erro;
+      }
+      const usuarioAtualizado = res.usuarioAlterado;
+      msgResult.innerHTML = res.msg;
+      console.log(usuarioAtualizado);
+    });
+  // .then((res) => {
+  //   const usuarioAtualizado = res.usuarioAlterado;
+  //   console.log(usuarioAtualizado)
+  //   // mensagem dizendo para o usuario que as alteracoes foram salvas
+  // });
 
   // quando altera o usuario, é preciso carregar um novo storage
   // alterar a lógiac das outras páginas para carregar quando tiver um usuario ou um usuario alterado

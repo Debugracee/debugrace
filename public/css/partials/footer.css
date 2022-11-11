@@ -40,10 +40,14 @@
   margin-left: 5px;
 }
 
+
 footer {
-  box-sizing: border-box;
-  background-color: #1c256d;
-  font-family: "Courier Prime";
+    box-sizing: border-box;
+    background-color: #1c256d;
+    font-family: "Courier Prime";
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .media-dad {
