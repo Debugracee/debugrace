@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const removeDiscord = document.querySelector('.info-discord')
   const usuario = localStorage.getItem("usuario");
   const usuarioObject = JSON.parse(usuario);
   const token = localStorage.getItem("token");
   const tokenObject = JSON.parse(token);
   console.log(tokenObject);
+  removeDiscord.style.display = 'none'
   
   fetch("https://debugrace-backend.onrender.com/status", {
     method: "POST",
@@ -39,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 });
+
 
 // const btnMobile = document.getElementById("btn-mobile");
 // function toggleMenu(event) {
