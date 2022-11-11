@@ -83,6 +83,12 @@ form input {
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 1rem 0;
+  transition: 0.2s;
+}
+
+.editar:hover {
+  transition: 0.2s;
+  background-color: #141a4c;
 }
 
 form small {
@@ -99,13 +105,20 @@ form small {
 
 .check-button {
   cursor: pointer;
-  width: 35%;
-  height: 65px;
+  width: 27%;
+  height: 59px;
   border-radius: 10px;
   color: #ffffff;
-  background-color: #753354;
+  background-color: #ab3956;
+  transition: 0.2s;
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.check-button:hover {
+  transition: 0.2s;
+  background-color: #b31a40;
+  color: rgb(228, 236, 252);
 }
 
 .delete {
@@ -210,79 +223,37 @@ form small {
     width: auto;
   }
 
-#form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10.3rem;
-}
+  #form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10.3rem;
+  }
 
   #nome,
   #email,
   #password {
     width: 70vw;
   }
-
 
   .container-editar {
     display: flex;
     justify-content: flex-start;
   }
 
-
   .editar {
     margin: 1rem 0;
     padding: 0 1.2rem;
-    width: 20vw;
-    height: 4vh;
+    width: 14vw;
+    height: 5vh;
   }
 
   .check-button {
     text-align: center;
     height: 6vh;
     width: 36vw;
-
   }
-
-.confirma {
-  margin-top: 1rem;
-  margin-left: 6rem;
-  display: flex;
-  justify-content: center;
-  width: 80%;
-}
-
-#btnDelete {
-  width: 100%;
-}
-
-  .delete {
-    width: 100%;
-  }
-
-}
-
-
-@media (min-width: 769px) and (max-width: 914px) {
-  header {
-    width: auto;
-  }
-
-#form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10.3rem;
-}
-
-  #nome,
-  #email,
-  #password {
-    width: 70vw;
-  }
-
 
   .confirma {
     margin-top: 1rem;
@@ -291,13 +262,47 @@ form small {
     justify-content: center;
     width: 80%;
   }
-  
+
+  #btnDelete {
+    width: 100%;
+  }
+
+  .delete {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 914px) {
+  header {
+    width: auto;
+  }
+
+  #form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10.3rem;
+  }
+
+  #nome,
+  #email,
+  #password {
+    width: 70vw;
+  }
+
+  .confirma {
+    margin-top: 1rem;
+    margin-left: 6rem;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+  }
 
   .container-editar {
     display: flex;
     justify-content: flex-start;
   }
-
 
   .editar {
     margin: 1rem 0;
@@ -310,10 +315,7 @@ form small {
     text-align: center;
     height: 6vh;
     width: 45vw;
-
   }
-
-
 }
 
 @media (min-width: 671px) and (max-width: 768px) {
@@ -350,29 +352,26 @@ form small {
     width: 70vw;
   }
 
-
   .container-editar {
     display: flex;
     justify-content: flex-start;
   }
 
-
   .editar {
     margin: 1rem 0;
     padding: 0 1.2rem;
-    width: 24vw;
-    height: 4vh;
+    width: 13vw;
+    height: 6vh;
   }
 
   .check-button {
     text-align: center;
-    height: 5vh;
-    width: 45vw;
+    height: 6vh;
+    width: 26vw;
   }
-
 }
 
-@media (min-width:477px) and (max-width: 670px) {
+@media (min-width: 477px) and (max-width: 670px) {
   .header {
     height: 20vh;
   }
@@ -381,7 +380,7 @@ form small {
     width: 85%;
     height: 35px;
     text-align: start;
-   margin: 0 3rem;
+    margin: 0 3rem;
   }
 
   .configlogo {
@@ -403,25 +402,22 @@ form small {
     width: 70vw;
   }
 
-
   .container-editar {
     display: flex;
     justify-content: flex-start;
   }
 
-
   .editar {
     margin: 1rem 0;
     padding: 0 1.2rem;
-    width: 24vw;
-    height: 4vh;
+    width: 15vw;
+    height: 6vh;
   }
 
   .check-button {
     text-align: center;
-    height: 5vh;
-    width: 45vw;
-
+    height: 6vh;
+    width: 26vw;
   }
 
   .delete {
@@ -432,7 +428,7 @@ form small {
 
 @media (min-width: 377px) and (max-width: 476px) {
   .header {
-    width: 70vh;
+    width: 100vw;
   }
 
   .titulo {
@@ -471,25 +467,22 @@ form small {
     width: 70vw;
   }
 
-
   .container-editar {
     display: flex;
     justify-content: flex-start;
   }
 
-
   .editar {
     margin: 1rem 0;
     padding: 0 1.2rem;
     width: 24vw;
-    height: 4vh;
+    height: 5vh;
   }
 
   .check-button {
     text-align: center;
-    height: 5vh;
-    width: 45vw;
-
+    height: 6vh;
+    width: 40vw;
   }
 
   .delete {
@@ -498,7 +491,7 @@ form small {
   }
 }
 
-@media (min-width:321px) and (max-width: 376px) {
+@media (min-width: 321px) and (max-width: 376px) {
   * {
     font-size: small;
   }
@@ -510,7 +503,7 @@ form small {
   }
 
   .header {
-    width: 60vh;
+    width: 67.6vh;
   }
 
   .container-editar {
@@ -555,15 +548,14 @@ form small {
     justify-content: center;
     margin: 0.5rem 0;
     padding: 0rem;
-    height: 3.2vh;
+    height: 3.8vh;
     width: 26vw;
   }
 
   .check-button {
     text-align: center;
-    height: 5vh;
-    width: 45vw;
-
+    height: 6vh;
+    width: 35vw;
   }
 
   .delete {
@@ -587,7 +579,9 @@ form small {
   }
 
   .text {
-    font-size: 1.9rem;
+    width: 55%;
+    font-size: 25px;
+    text-align: start;
   }
 
   .container-editar {
@@ -598,15 +592,15 @@ form small {
   .editar {
     align-items: center;
     justify-content: center;
-    height: 4vh;
+    height: 5vh;
     width: 24vw;
     margin: 0.5rem 0;
     padding: 0 1.1rem;
   }
 
   .check-button {
-    height: 4vh;
-    width: 40vw;
+    height: 6vh;
+    width: 39vw;
   }
 
   form {

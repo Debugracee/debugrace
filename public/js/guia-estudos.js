@@ -89,6 +89,15 @@ routerBackEnd.addEventListener("click", () => {
   }
 })
 
+containerModal.addEventListener("click", (e) => {
+  const clickClass = e.target.classList[0]
+  const classRemoveModal = ["container-modal", "x"]
+  const closeModal = classRemoveModal.some(classRemoveModal => classRemoveModal === clickClass)
+  if(closeModal) {
+      disableModal()
+  }
+});
+
 const usuarioObject = JSON.parse(usuario);
 fetch("https://debugrace-backend.onrender.com/status", {
   method: "POST",
@@ -126,47 +135,5 @@ fetch("https://debugrace-backend.onrender.com/status", {
       // editar estilização das tags (usuario logado)
     }
   });
-
-routerCicloBasico.addEventListener("click", () => {
-  if (!usuarioObject || !tokenObject) {
-    textModal.innerHTML = "Você deseja acessar os conteúdos da trilha Ciclo Básico?"
-    activeModal();
-  } else {
-    window.location.assign(
-      "https://debugrace-30568.web.app/guia-estudos/ciclo-basico"
-    );
-  }
-})
-
-routerFrontEnd.addEventListener("click", () => {
-  if (!usuarioObject || !tokenObject) {
-    textModal.innerHTML = "Você deseja acessar os conteúdos da trilha Front-End?"
-    activeModal();
-  } else {
-    window.location.assign(
-      "https://debugrace-30568.web.app/guia-estudos/front-end"
-    );
-  }
-})
-
-routerBackEnd.addEventListener("click", () => {
-  if (!usuarioObject || !tokenObject) {
-    textModal.innerHTML = "Você deseja acessar os conteúdos da trilha Back-End?"
-    activeModal();
-  } else {
-    window.location.assign(
-      "https://debugrace-30568.web.app/guia-estudos/back-end"
-    );
-  }
-})
-
-containerModal.addEventListener("click", (e) => {
-  const clickClass = e.target.classList[0]
-  const classRemoveModal = ["container-modal", "x"]
-  const closeModal = classRemoveModal.some(classRemoveModal => classRemoveModal === clickClass)
-  if(closeModal) {
-      disableModal()
-  }
-});
 
 
