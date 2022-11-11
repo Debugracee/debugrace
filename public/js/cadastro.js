@@ -8,6 +8,46 @@ const gender = document.getElementById("gender");
 const password = document.getElementById("password");
 const button = document.getElementById("check");
 
+const usuario = localStorage.getItem("usuario");
+const usuarioObject = JSON.parse(usuario);
+const token = localStorage.getItem("token");
+const tokenObject = JSON.parse(token);
+console.log(tokenObject);
+
+fetch("https://debugrace-backend.onrender.com/status", {
+  method: "POST",
+  headers: { "Content-type": "application/json" },
+  body: JSON.stringify({ email: usuarioObject.email }),
+})
+  .then((res) => res.json())
+  .then((res) => {
+    const logado = res.statusLogado;
+    const status = logado.statusLogin;
+    console.log(status);
+    if (!status || !tokenObject) {
+      window.location.assign("https://debugrace-30568.web.app/cadastro");
+    } else {
+      console.log(logado);
+      const configElement = document.querySelector("#item1");
+      const logoutButton = document.querySelector("#item2");
+
+      configElement.innerHTML = "CONFIGURAÇÕES";
+      configElement.href = "/configuracoes";
+      logoutButton.innerHTML = "SAIR";
+      logoutButton.removeAttribute("href");
+      logoutButton.addEventListener("click", () => {
+        localStorage.removeItem("token");
+        fetch("https://debugrace-backend.onrender.com/deslog", {
+          method: "POST",
+          headers: { "Content-type": "application/json" },
+          body: JSON.stringify({ email: usuarioObject.email }),
+        }).then((res) => res.json());
+        localStorage.removeItem("usuario");
+        window.location.assign("https://debugrace-30568.web.app/login");
+      });
+    }
+  });
+
 async function registerUsers() {
   let newUser = {
     nome: nome.value.trim(),
@@ -22,11 +62,11 @@ async function registerUsers() {
   })
     .then((res) => res.json())
     .then((res) => {
-      if(res.erro) {
-        const msgResult = document.querySelector("#msgResult")
-        msgResult.innerHTML = res.erro
+      if (res.erro) {
+        const msgResult = document.querySelector("#msgResult");
+        msgResult.innerHTML = res.erro;
       } else {
-        msgResult.innerHTML = res.msg
+        msgResult.innerHTML = res.msg;
       }
       if (res.usuario.id) {
         window.location.assign("https://debugrace-30568.web.app/login");
