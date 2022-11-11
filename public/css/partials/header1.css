@@ -1,46 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Courier+Prime:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Courier+Prime:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /*HEADER*/
 header {
-    background-color: #1C256D;
+  background-color: #1c256d;
 }
 
-header img{
-    width: 15.5rem;
-    margin-left: 4rem;
+header img {
+  width: 15.5rem;
+  margin-left: 4rem;
 }
 
 .nav-item {
-    margin-right: 5.5rem;
-    font-size: 1.1rem;
+  margin-right: 5.5rem;
+  font-size: 1.1rem;
 }
 
-#item00, #item0, #item1, #item2 {
-    color: rgb(228, 236, 252);
+#item00,
+#item0,
+#item1,
+#item2 {
+  color: rgb(228, 236, 252);
 }
 
-#item00:hover, #item0:hover, #item1:hover {
-    color:rgb(101, 109, 199);
+#item00:hover,
+#item0:hover,
+#item1:hover {
+  color: rgb(101, 109, 199);
 }
 
 .nav-link {
-    font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
-
-.entrar{
-    border-radius: 0.2rem;
-    background-color: #ab3956;
+.entrar {
+  border-radius: 0.2rem;
+  background-color: #ab3956;
 }
 
-.entrar:hover {background-color: #b31a40; color: rgb(228, 236, 252);}
+.entrar:hover {
+  background-color: #b31a40;
+  color: rgb(228, 236, 252);
+}
 /*HEADER*/
 
 /* @media (max-width: 600px) {

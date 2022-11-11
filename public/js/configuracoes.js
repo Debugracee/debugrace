@@ -139,6 +139,15 @@ btnSave.addEventListener("click", (e) => {
     }),
   })
   .then((res) => res.json())
+  .then((res) => {
+    if(res.erro) {
+      const msgResult = document.querySelector("#msgResult")
+      msgResult.innerHTML = res.erro
+    }
+    const usuarioAtualizado = res.usuarioAlterado;
+    msgResult.innerHTML = res.msg
+    console.log(usuarioAtualizado)
+  });
     // .then((res) => {
     //   const usuarioAtualizado = res.usuarioAlterado;
     //   console.log(usuarioAtualizado)

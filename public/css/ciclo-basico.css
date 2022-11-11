@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Courier+Prime:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Courier+Prime:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
 
 * {
   box-sizing: border-box;
@@ -15,10 +15,10 @@ body {
 
 /*HEADER*/
 header {
-  background-color: #1C256D;
+  background-color: #1c256d;
 }
 
-header img{
+header img {
   width: 15.5rem;
   margin-left: 4rem;
 }
@@ -29,20 +29,23 @@ header img{
 }
 
 .nav-link {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   color: rgb(228, 236, 252);
 }
 
-.nav-link:hover{
-  color:rgb(101, 109, 199)
+.nav-link:hover {
+  color: rgb(101, 109, 199);
 }
 
-.entrar{
+.entrar {
   border-radius: 0.2rem;
   background-color: #ab3956;
 }
 
-.entrar:hover {background-color: #b31a40; color: rgb(228, 236, 252);}
+.entrar:hover {
+  background-color: #b31a40;
+  color: rgb(228, 236, 252);
+}
 /*HEADER*/
 
 /* .menu i {
@@ -103,8 +106,6 @@ header img{
   font-size: 1.3rem;
 }
 
-
-
 .painel-text img {
   width: 50rem;
 }
@@ -153,7 +154,7 @@ header img{
   height: 50vh;
   box-shadow: -12px -12px 0px #1c256d;
   align-items: center;
-  transition: all 0.3s; 
+  transition: all 0.3s;
 }
 
 .content:hover {
@@ -190,15 +191,14 @@ header img{
   font-size: 1.5rem;
 }
 
-
 .content-text p {
-    /* margin-bottom: 1rem; */
-    width: 65vw;
-    font-family: "Cairo", sans-serif;
-    font-weight: bold;
-    font-size: 1.15rem;
-    color: #363f82;
-    text-align: justify;
+  /* margin-bottom: 1rem; */
+  width: 65vw;
+  font-family: "Cairo", sans-serif;
+  font-weight: bold;
+  font-size: 1.15rem;
+  color: #363f82;
+  text-align: justify;
 }
 
 .content-text a {
@@ -264,18 +264,18 @@ header img{
   .painel-text p {
     font-size: 15px;
     width: 85vw;
-}
+  }
 
-.content {
-  margin-top: 26px;
-}
+  .content {
+    margin-top: 26px;
+  }
 
   .content-text h5 {
     margin-bottom: 10px;
     font-size: 13px;
   }
   .content-text p {
-    font-size: 0.70rem;
+    font-size: 0.7rem;
   }
   .content-text a {
     width: 49vw;
@@ -286,7 +286,7 @@ header img{
 @media (max-width: 375px) {
   .painel-text p {
     font-size: 13px;
-}
+  }
   .content-page h3 {
     font-size: 18px;
   }
@@ -304,8 +304,6 @@ header img{
 }
 
 @media (max-width: 320px) {
-
-
   .content-text p {
     font-size: 0.63rem;
   }
@@ -330,4 +328,3 @@ header img{
     flex-direction: column;
     visibility: visible;
 } */
-

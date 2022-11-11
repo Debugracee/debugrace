@@ -1,155 +1,145 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Courier+Prime:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Courier+Prime:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
 
 .info-discord {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .discord {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-    background-color: #1C256D;
-    font-family: 'Cairo', sans-serif;
-    text-align: center;
-    cursor: pointer;
-    border: solid;
-    border-radius: 5px;
-    border-color: #2F66A6;
-    /* max-width: 90vw; */
-    width: 50vw;
-    /* min-width: 10vw; */
-    height: 2.5rem;
+  box-sizing: border-box;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c256d;
+  font-family: "Cairo", sans-serif;
+  text-align: center;
+  cursor: pointer;
+  border: solid;
+  border-radius: 5px;
+  border-color: #2f66a6;
+  /* max-width: 90vw; */
+  width: 50vw;
+  /* min-width: 10vw; */
+  height: 2.5rem;
 }
 
 .discord a {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    text-decoration: none;
-    color: #FFFF;
-    width: 60%;
+  text-decoration: none;
+  color: #ffff;
+  width: 60%;
 }
 
 .discord a i {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 footer {
-
-    background-color: #1C256D;
-    font-family: 'Courier Prime';
-
+  box-sizing: border-box;
+  background-color: #1c256d;
+  font-family: "Courier Prime";
 }
 
 .media-dad {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .socialmedia {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .socialmedia ul {
-
-    display: flex;
-    justify-content: center;
-    padding-left: 0.9rem;
-
+  display: flex;
+  justify-content: center;
+  padding-left: 0.9rem;
 }
 
 .socialmedia li {
-
-    list-style-type: none;
-    margin-right: 0.5rem;
-
+  list-style-type: none;
+  margin-right: 0.5rem;
 }
 
 .socialmedia i {
-
-    font-size: xx-large;
-    color: #E3E6FF;
-    justify-content: space-between;
-
+  font-size: xx-large;
+  color: #e3e6ff;
+  justify-content: space-between;
 }
 
 .etc {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
 .footer-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 14vw;
-    margin-left: 1rem;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14vw;
+  margin-left: 1rem;
 }
 
 .footer-logo img {
-
-    width: 12vw;
-    height: 5vh;
-
-
+  width: 12vw;
+  height: 5vh;
 }
 
 .copyright {
-
-    width: 100%;
-    background-color: #060453;
-    color: #FFFF;
-    text-align: center;
-    font-size: small;
-    padding: 0.5rem;
-
+  width: 100%;
+  background-color: #060453;
+  color: #ffff;
+  text-align: center;
+  font-size: small;
+  padding: 0.5rem;
 }
 
 @media (min-width: 150px) and (max-width: 319px) {
-.footer-logo img {
+  .footer-logo img {
     width: 40vw;
-}
-.discord {
+  }
+  .discord {
     font-size: 10px;
-}
-
+  }
 }
 
 @media (min-width: 320px) and (max-width: 700px) {
-    .footer-logo img {
-        width: 25vw;
-    }
+  .footer-logo img {
+    width: 25vw;
+  }
 }
 
 @media (max-width: 768px) {
-    .discord{
-        width: 88vw;
-    }
+  .discord {
+    width: 88vw;
+  }
 }
 
 @media (max-width: 320px) {
+  .discord a {
+    width: auto;
+    font-size: 11px;
+  }
+}
 
-    .discord a {
-        width: auto;
-        font-size: 11px;
-    }
+@media (max-width: 375px) {
+  .discord a {
+    width: auto;
+  }
 }
 
 @media (max-width: 425px) {
-    .discord a {
-        font-size: 13px;
-    }
+  .discord a {
+    font-size: 11px;
+  }
 }

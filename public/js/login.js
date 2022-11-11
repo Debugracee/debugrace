@@ -23,17 +23,20 @@ async function loginUsuario() {
     .then((res) => res.json())
     .then((res) => {
       console.log(res);
-      if(res.erro) {
-        const msgErro = document.querySelector("#msgErro")
-        msgErro.innerHTML = res.erro
+      if (res.erro) {
+        const msgResult = document.querySelector("#msgResult");
+        msgResult.innerHTML = res.erro;
+      } else {
+        msgResult.innerHTML = res.msg;
       }
+
       const usuario = res.usuario;
       const token = res.token;
       console.log(usuario);
       localStorage.setItem("usuario", JSON.stringify(usuario));
       localStorage.setItem("token", JSON.stringify(token));
       console.log(usuario.id);
-      if(usuario.id && token) {
+      if (usuario.id && token) {
         window.location.assign("https://debugrace-30568.web.app/guia-estudos");
       }
     });

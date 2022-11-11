@@ -22,10 +22,11 @@ async function registerUsers() {
   })
     .then((res) => res.json())
     .then((res) => {
-      if (email.value.trim()) {
-        alertError(email, res.emailUsadoErro);
+      if(res.erro) {
+        const msgResult = document.querySelector("#msgResult")
+        msgResult.innerHTML = res.erro
       } else {
-        alertSuccess(email);
+        msgResult.innerHTML = res.msg
       }
       if (res.usuario.id) {
         window.location.assign("https://debugrace-30568.web.app/login");
